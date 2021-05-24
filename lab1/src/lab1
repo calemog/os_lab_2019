@@ -1,0 +1,70 @@
+•	№1
+bash-4.4$ cd /projects/os_lab_2019/lab1/src
+bash-4.4$ background.sh &
+[1] 134
+bash-4.4$ bash: background.sh: command not found
+
+bash-4.4$ cat ../../../test
+lol
+lolto
+tot
+rot
+yot
+
+
+clear
+
+bash-4.4$ cd ../../../
+bash-4.4$ wc -m test
+26 test
+
+
+№2
+bash-4.4$ pwd
+/projects
+bash-4.4$ grep cake os_lab_2019/lab1/src/cake_rhymes.txt > with_cake.txt
+bash-4.4$ cat with_cake.txt
+
+bash-4.4$ rm 2>/dev/null
+
+
+№3
+chmod ugo+rwx os_lab_2019/lab1/src
+
+Cкрипт
+#!/bin/bash
+
+pwd
+date +"%d-%m-%y"
+printenv PATH
+
+
+
+
+№4
+average.sh
+
+#!/bin/bash
+
+count=1
+sum=0
+
+while [ -n "$1" ]
+do
+echo "Параметр №$count = $1"
+count=$[ $count + 1 ]
+sum=$[$sum + $1]
+echo "Сумма = $sum"
+shift #сдвиг вправо на один аргумент
+done
+
+aver=$[$sum/$count]
+echo "Среднее арифметическое: $aver"
+
+
+for i in `seq 150`
+do
+od -An -N1 -i /dev/random » os_lab_2019/lab1/src/numbers.txt
+done
+
+xargs!!!!!!
